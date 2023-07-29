@@ -6,7 +6,7 @@ const getCroppedImageUrl = (url: string) => {
     const target = 'media/'; 
     const index = url.indexOf(target) + target.length;
     //from 0 index to media/ then add the crop dimension + the rest of the url
-    return url.slice(0,index) + 'crop/600/400' + url.slice(index)
+    return url.slice(0,index) + 'crop/600/400/' + url.slice(index)
 
 }
 
