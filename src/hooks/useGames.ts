@@ -2,11 +2,19 @@ import React, { useEffect, useState } from 'react'
 import apiClient from '../services/api-client';
 import { CanceledError } from 'axios';
 
+//export to use in PlatformIconList
+export interface Platform {
+  id: number,
+  name: string,
+  slug: string,
+}
+
 //export to use in GameCard
 export interface Games {
     id: number;
     name: string;
     background_image: string;
+    parent_platforms: {platform: Platform}[]
   }
 
 interface FetchGamesResponse {
