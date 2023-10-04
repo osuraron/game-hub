@@ -5,7 +5,7 @@ import { CanceledError } from "axios";
 
 interface FetchGenresResponse<T> {
   count: number;
-  results: T[]
+  results: T[];
 }
 
 const useData = <T>(endpoint: string) => {
