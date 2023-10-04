@@ -1,5 +1,6 @@
 
 import useData from './useData';
+import { Genre } from './useGenres';
 
 //export to use in PlatformIconList
 export interface Platform {
@@ -18,7 +19,7 @@ export interface Games {
     metacritic: number;
   }
 
-const useGames = () => useData<Games>('/games');
+const useGames = (selectedGenre: Genre | null) => useData<Games>('/games',{params: {genres: selectedGenre?.id}}, [selectedGenre?.id]);
   
 
 
