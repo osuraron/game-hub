@@ -2,6 +2,8 @@
 //used to render a cropped image to improve page reload
 
 const getCroppedImageUrl = (url: string) => {
+    if(!url) return '';
+    
     //url has /media
     const target = 'media/'; 
     const index = url.indexOf(target) + target.length;
