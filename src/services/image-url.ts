@@ -1,9 +1,10 @@
 //function to get url with image crop adjustments
 //used to render a cropped image to improve page reload
+import noImage from '../assets/no-image-placeholder.webp' //placeholder image 
 
 const getCroppedImageUrl = (url: string) => {
-    if(!url) return '';
-    
+    if(!url) return noImage;
+
     //url has /media
     const target = 'media/'; 
     const index = url.indexOf(target) + target.length;
